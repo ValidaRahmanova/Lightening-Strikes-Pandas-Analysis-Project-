@@ -1,6 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-v=pd.read_csv("lightening strikes dataset.csv")
+v=pd.read_csv("dataset.csv")
 v['month'] = pd.to_datetime(v['date']).dt.month
 sum=v.groupby('month')['number_of_strikes'].sum()
 plt.figure(figsize=(10, 6))
